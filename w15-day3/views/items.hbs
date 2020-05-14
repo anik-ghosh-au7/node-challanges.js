@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>All Items</title>
+    </head>
+    <body>
+        <h1>Items List :</h1>
+        <p>
+            <h2>Following is the list of all the items :</h2>
+            <ol>
+                {{#each arr}}
+                    <li>Id : {{this.id}}</li>
+                        <ul>
+                            <li>userId : {{this.userId}}</li>
+                            <li>title : {{this.title}}</li>
+                            <li>body : {{this.body}}</li>
+                        </ul>
+                {{/each}}
+            </ol>
+        </p>
+    </body>
+</html>

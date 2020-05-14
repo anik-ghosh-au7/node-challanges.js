@@ -1,0 +1,13 @@
+html
+    head
+        title Member's Application
+    body
+        h1 Welcome to member's app
+        p
+            h2 Following is the list of all members :
+        ol
+            each key in members
+                li='Name : ' + key.name
+                ul
+                    li='Email : ' + key.email
+                    li='Github : ' + key.github

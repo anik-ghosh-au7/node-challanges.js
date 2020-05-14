@@ -1,0 +1,14 @@
+html
+    head
+        title All Items
+    body
+        h1 Items List : 
+    p
+        h2 Following is the list of all the items :
+    ol
+        each elem in arr
+            li='Id : ' + elem.id
+            ul
+                li='userId : ' + elem.userId
+                li='title : ' + elem.title
+                li='body : ' + elem.body

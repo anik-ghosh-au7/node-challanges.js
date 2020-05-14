@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>All Items</title>
+    </head>
+    <body>
+        <h1>Items List :</h1>
+        <p>
+            <h2>Following is the list of all the items :</h2>
+            <ol>
+                <% for(let i=0; i < arr.length; i++){%>
+                <li>Id : <%=arr[i].id%></li>
+                    <ul>
+                        <li>userId : <%=arr[i].userId%></li>
+                        <li>title : <%=arr[i].title%></li>
+                        <li>body : <%=arr[i].body%></li>
+                    </ul>
+                <%}%>  
+            </ol>
+        </p>
+    </body>
+</html>

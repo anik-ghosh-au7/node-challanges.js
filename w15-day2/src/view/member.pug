@@ -1,0 +1,11 @@
+html
+    head
+        title Member's Application
+    body
+        h1 Welcome to member's app
+        p
+            h2='Following is the details of ' + member[0].name
+        ol
+            each key in member
+                li='Email : ' + key.email
+                li='Github : ' + key.github

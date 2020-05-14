@@ -1,0 +1,17 @@
+{
+  "name": "w15-day4-cc",
+  "version": "1.0.0",
+  "description": "Week 15 Day 4 Coding Challange",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Anik Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.3"
+  }
+}
