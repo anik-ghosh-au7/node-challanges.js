@@ -9,7 +9,7 @@
 
 let args = require('minimist')(process.argv.slice(2),{
     boolean: ["help"],
-    string: ["file"]
+    string: ["file", "out"]
 });
 let fs = require('fs');
 let path = require('path');
@@ -37,7 +37,8 @@ function printHelp(){
     console.log('index usage:');
     console.log('');
     console.log('--help             Print help');
-    console.log('--file=filename    Print filename');
+    console.log('--file=filename    Read file');
+    console.log('--out(optional)    Write to uppcaseFile.txt');
 };
 
 function error(msg, includeHelp = false){
@@ -76,8 +77,17 @@ function processFile(inStream){
         }
     })
 
-    outStream.pipe(upperStream);
+    outStream = outStream.pipe(upperStream);
 
-    var targetStream = process.stdout;
+    // var targetStream = process.stdout;
+
+    let targetStream;
+    if (!args.out) {
+        targetStream = process.stdout;
+    } else {
+        let OUT_FILE = path.join(__dirname, 'uppcaseFile.txt');
+        targetStream = fs.createWriteStream(OUT_FILE);
+    }
+
     outStream.pipe(targetStream);
 }
