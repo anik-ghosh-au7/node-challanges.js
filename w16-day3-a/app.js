@@ -38,12 +38,12 @@ function error(msg, includeHelp=false) {
 
 function processFile(inStream) {
 
-    let target_stream, target_file, upper_Stream;
+    let target_stream, target_file, transform_stream;
 
     if (args.lorem) {
 
         target_file = path.join(__dirname, 'loremFile.txt');
-        upper_Stream = new Transform({
+        transform_stream = new Transform({
             transform(chunk, enc, callback) {
                 this.push(chunk);
                 callback();
@@ -53,7 +53,7 @@ function processFile(inStream) {
     } else {
 
         target_file = path.join(__dirname, 'uppcaseFile.txt');
-        upper_Stream = new Transform({
+        transform_stream = new Transform({
             transform(chunk, enc, callback) {
                 this.push(chunk.toString().toUpperCase());
                 callback();
@@ -65,6 +65,6 @@ function processFile(inStream) {
     // inStream.pipe(upper_Stream);
     target_stream = fs.createWriteStream(target_file);
     // upper_Stream.pipe(target_stream);
-    inStream.pipe(upper_Stream).pipe(target_stream);
+    inStream.pipe(transform_stream).pipe(target_stream);
 
 };
