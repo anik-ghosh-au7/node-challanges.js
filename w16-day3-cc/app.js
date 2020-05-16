@@ -48,7 +48,7 @@ function processFile(input_filepath) {
                 contents = contents;
                 fs.writeFile(target_file, contents, err => {
                     if (err) {
-                        console.log(err);
+                        error(err, false);
                         return
                     };
                 });
@@ -57,7 +57,7 @@ function processFile(input_filepath) {
                 contents = contents.toString().toUpperCase();
                 fs.writeFile(target_file, contents, err => {
                     if (err) {
-                        console.log(err);
+                        error(err, false);
                         return
                     };
                 });

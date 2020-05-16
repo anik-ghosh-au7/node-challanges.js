@@ -62,8 +62,9 @@ function processFile(inStream) {
 
     };
 
-    inStream.pipe(upper_Stream);
+    // inStream.pipe(upper_Stream);
     target_stream = fs.createWriteStream(target_file);
-    upper_Stream.pipe(target_stream);
+    // upper_Stream.pipe(target_stream);
+    inStream.pipe(upper_Stream).pipe(target_stream);
 
 };
