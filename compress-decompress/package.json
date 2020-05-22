@@ -1,0 +1,14 @@
+{
+  "name": "compress-decompress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anik Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "object-sizeof": "^1.6.0"
+  }
+}

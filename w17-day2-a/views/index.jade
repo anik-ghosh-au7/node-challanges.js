@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p Please go to '/users' route to perform the CRUD operations
+  Ul
+    li '/users/'  ----------------------------------------  to get all users
+    li '/users/:name' ------------------------------------  to get a individual user
+    li '/users/adduser/:name/:email/:password'  ----------  to add a user
+    li '/users/updateemail/:name/:email/:password'  ------  to update user's Email
+    li '/users/updateusername/:name/:email/:password' ----  to update user's Username 
+    li '/users/updatepassword/:name/:email/:password' ----  to update user's Password
+    li '/users/deluser/:name/:password' ------------------  to delete a user
