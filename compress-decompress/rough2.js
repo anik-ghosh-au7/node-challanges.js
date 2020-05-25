@@ -30,14 +30,14 @@ const fs = require('fs');
 //         't'
 //     ];
 
-// let data4 = [
-//         {'aabxaabx': [0, 9, 10, 11, 12, 13]},
-//         't',
-//         'c',
-//         'a',
-//         'y',
-//         't'
-//     ];
+let data4 = [
+        {'aabxaabx': [0, 9, 10, 11, 12, 13]},
+        't',
+        'c',
+        'a',
+        'y',
+        't'
+    ];
 
 // console.log('non string --> ', sizeof(data)); // 74
 // console.log('full string --> ', sizeof(JSON.stringify(data)));  // 80
@@ -51,13 +51,13 @@ const fs = require('fs');
 
 // let new_data = Buffer.from(JSON.stringify(data3));
 
-// let new_data1 = Buffer.from(JSON.stringify(data4));
+let new_data1 = Buffer.from(JSON.stringify(data4));
 
 // console.log(sizeof(new_data)) // 54
 // // console.log(new_data);
 // console.log(eval(new_data.toString()));
 
-// console.log(sizeof(new_data1)) // 52
+console.log(sizeof(new_data1)) // 52
 // // console.log(new_data1);
 // console.log(eval(new_data.toString()));
 
