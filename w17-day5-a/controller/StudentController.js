@@ -16,7 +16,7 @@ StudentController.add = (req, res) => {
 
 // get all students list
 StudentController.getAll = (req, res) => {
-    Student.find((err, data) => {
+    Student.find({},{_id: 0},(err, data) => {
         if (err) {
             res.status(500).send({msg: "Internal Server Error"});
         } else {
@@ -28,7 +28,7 @@ StudentController.getAll = (req, res) => {
 // get all students list according to state
 StudentController.getAllByState = (req, res) => {
     let state = req.params.state;
-    Student.find({State: state}, (err, data) => {
+    Student.find({State: state}, {_id: 0}, (err, data) => {
         if (err) {
             res.status(500).send(err);
         } else {
@@ -46,7 +46,7 @@ StudentController.getdetails = (req, res) => {
     let firstName = req.params.firstName;
     let lastName = req.params.lastName;
 
-    Student.find({FirstName: firstName, LastName: lastName}, (err, data) => {
+    Student.find({FirstName: firstName, LastName: lastName}, {_id: 0}, (err, data) => {
         if (err) {
             res.status(500).send(err);
         } else {

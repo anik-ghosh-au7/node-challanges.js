@@ -3,6 +3,9 @@ var router = express.Router();
 var {StudentController} = require('../controller/StudentController');
 
 /* Add student */
+router.get('/', (req, res) => res.status(400).send('Please provide a valid route'));
+
+/* Add student */
 router.post('/add', StudentController.add);
 
 /* Get all students list */
