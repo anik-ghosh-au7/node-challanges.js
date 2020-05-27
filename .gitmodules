@@ -1,0 +1,3 @@
+[submodule "attainu-blog"]
+	path = attainu-blog
+	url = https://github.com/attainu/attainu-blog.git
