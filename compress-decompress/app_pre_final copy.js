@@ -18,6 +18,7 @@ const calculateZ = (input) => {
     let right = 0;
     for (let k = 1; k < input.length; k++) {
         if (k > right) {
+
             left = right = k;
             while (right < input.length && input[right] === input[right - left]) {
                 right++;
@@ -67,15 +68,21 @@ while (input.length > 0) {
         };
         unmatched_str = '';
         key = input.slice(0, max_z);
-        value = [];
+        value = '';
         z_arr.forEach((elem,index) => {
             if (elem == max_z && index_length(index) < max_z) {
-                value.push(index)
+                // value.push(index)
+                if (value) {
+                    value = value + ',' + index
+                } else {
+                    value = value + index;
+                } 
             }
         });
         data_obj.push({[key]: value});
-        for (let i = value.length-1; i >=0; i--) {
-            input = input.delete(value[i], max_z)
+        let value_arr = value.split(',').map(elem => Number(elem))
+        for (let i = value_arr.length-1; i >=0; i--) {
+            input = input.delete(value_arr[i], max_z)
         };
         input = input.delete(0, max_z)
         break;
@@ -86,23 +93,22 @@ if (unmatched_str) {
     data_obj.push(unmatched_str);
 }
     console.log(data_obj);
-    let buffer_data = Buffer.from(JSON.stringify(data_obj));
-    return buffer_data;
+    return data_obj;
 };
 
 const decompression = (compressed_input) => {
 
-    let retrived_data = JSON.parse(compressed_input)
+    let retrived_data = compressed_input;
 
     let output_str = '';
 
     for (let i = retrived_data.length-1; i >= 0; i--) {
         if (typeof(retrived_data[i])=== "object") {
             let key = Object.keys(retrived_data[i]);
-            let indices = Object.values(retrived_data[i]);
+            let indices = Object.values(retrived_data[i])[0].split(',').map(elem => Number(elem));
             output_str = output_str.insert(0, key);
-            for (let j = 0; j < indices[0].length; j++) {
-                output_str = output_str.insert(indices[0][j], key);
+            for (let j = 0; j < indices.length; j++) {
+                output_str = output_str.insert(indices[j], key);
             };
         } else {
             output_str = retrived_data[i] + output_str;
@@ -127,4 +133,3 @@ const main = (input) => {
 };
 
 console.log(main(data));
-// main(data);
