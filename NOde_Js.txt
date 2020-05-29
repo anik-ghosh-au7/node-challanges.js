@@ -49,7 +49,12 @@ To validate all api endpoint use postman.
 
 Week 17 Day 3
 Create a CRUD application using express generator, Mongo and Mongoose. 
-Input Fields (all fields are required) Name - string Username- string, unique Email: string Password: string Group; array of string 
+Input Fields (all fields are required) 
+Name - string 
+Username- string, unique 
+Email: string 
+Password: string 
+Group; array of string 
 
 Week 17 Day 4
 Attainu Student library 
@@ -81,7 +86,10 @@ The schema should contain the following entities -
 ○ Financial Transaction 
 ○ Loan 
 ○ Deposit 
-	● Write SQL queries for inserting data in all of the above tables. ● Write SQL queries 		for returning data from all of the above tables. ● Write an SQL query for returning all 		the customers who has an account in the Bangalore branch. ● Write an SQL query that 	returns customers who have both savings and loan accounts 
+Write SQL queries for inserting data in all of the above tables.
+Write SQL queries for returning data from all of the above tables.
+Write an SQL query for returning all the customers who has an account in the Bangalore branch.
+Write an SQL query that returns customers who have both savings and loan accounts 
 
 -------------------------------------------------------------------------------------------
 
@@ -92,7 +100,9 @@ Create a for loop that iterates up to 100 while outputting "fizz" at multiples o
 There is an array with some numbers. All numbers are equal except for one. Try to find it!
 findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
 findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
-Have the function LargestPair(num) take the num parameter being passed and determine the largest double digit number within the whole number. For example: if num is 4759472 then your program should return 94 because that is the largest double digit number. The input will always contain at least two positive digits. 
+Have the function LargestPair(num) take the num parameter being passed and determine the largest double digit number within the whole number. 
+For example: if num is 4759472 then your program should return 94 because that is the largest double digit number. 
+The input will always contain at least two positive digits. 
 Week 15 Day 4
 Create a REST API calculator using ExpressJS
 Create four routes in Express for add, sub, mul and div.
