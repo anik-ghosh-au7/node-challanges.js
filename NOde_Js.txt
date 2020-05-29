@@ -1,0 +1,135 @@
+NOde Js
+Assignment
+Week 15 Day 1
+ Create An empty Array in server(index.js) file.
+1- write a get api  to get all the content of array  (app.get(‘/’)) // all the items
+2- write a get api to one item from the array (app.get(‘/:id’)) // one item based on the id
+3- write a post api to create a new item. (Push obj in array);
+4- Write a put and delete to update and delete an item from array.
+
+Week 15 Day 2
+Create An empty Array in server(index.js) file.
+1- write a get api  to get all the content of array  (app.get(‘/’)) // all the items
+2- write a get api to one item from the array (app.get(‘/:id’)) // one item based on the id
+3- write a post api to create a new item. (Push obj in array);
+4- Write a put and delete to update and delete an item from array.
+Show the get request data in UI using PUG.
+
+Week 15 Day 3
+Show this data using Pug, ejs and HandleBar
+Using 
+Get   // all data
+Get/:id  // single item
+Post  // can add item  
+
+
+Week 15 Day 4
+Tennis Play CRUD using HBS. Implement all four HTTP verbs. I am giving html code here.
+
+Week 15 Day 5
+Create to a project to upload single and multiple file to local using hbs.
+
+Week 16 Day 1
+Send the cookies from server to client (with key) and display it. Cookies should get destroyed after 10min.
+
+Week 16 Day 3
+Read a  txt file using stream and convert all the letter to uppercase and make a new file named uppcaseFile.txt
+Read a  txt file using stream and lorem key word and make a new file named loremFile.txt
+
+Week 17 Day 2
+Create an CRUD login application using express generator. 
+Params 
+Username 
+Email 
+Password 
+User can login using Username and password 
+If successful -- send out as Login Success else the error. User can update any of the above params. 
+User can update and delete. 
+To validate all api endpoint use postman.
+
+Week 17 Day 3
+Create a CRUD application using express generator, Mongo and Mongoose. 
+Input Fields (all fields are required) Name - string Username- string, unique Email: string Password: string Group; array of string 
+
+Week 17 Day 4
+Attainu Student library 
+Endpoint that you have to create are as follows 
+Student Sign up details (post call) First name, last name ,email, mobile, address, pincode, state, country, 
+List all the student (get call) 
+Filter student based on State (get or post) 
+Detail about the single student (get or post) 
+
+Week 17 Day 5
+Create an Express + MongoDB CRUD application 
+1. Continuing with the AttainU Application, finish the students part. 
+2. Create a page where all the students are listed. 
+3. Create a page where the user can add a new student. 
+4. The student form should talk Name, Phone and Location. All these can be verified using postman.
+
+Week 18 Day 1
+Install postgre on your machine. Create a database bank Will continue from here in next class.
+
+
+
+
+Week 18 Day 2
+Build schema for banking application ● 
+The schema should contain the following entities - 
+○ Branch 
+○ Account 
+○ Customer 
+○ Financial Transaction 
+○ Loan 
+○ Deposit 
+	● Write SQL queries for inserting data in all of the above tables. ● Write SQL queries 		for returning data from all of the above tables. ● Write an SQL query for returning all 		the customers who has an account in the Bangalore branch. ● Write an SQL query that 	returns customers who have both savings and loan accounts 
+
+-------------------------------------------------------------------------------------------
+
+CC
+
+Week 15 Day 2
+Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.
+There is an array with some numbers. All numbers are equal except for one. Try to find it!
+findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+Have the function LargestPair(num) take the num parameter being passed and determine the largest double digit number within the whole number. For example: if num is 4759472 then your program should return 94 because that is the largest double digit number. The input will always contain at least two positive digits. 
+Week 15 Day 4
+Create a REST API calculator using ExpressJS
+Create four routes in Express for add, sub, mul and div.
+Each route should take two POST data parameters - num1 and num2 in JSON format and do the arithmetic operation on them.
+Example output: For sum, the response should look like -
+{    "num1": 20,    "num2": 50,    "result": 70}
+
+Week 15 Day 5
+Create to a project to upload single and multiple file to cloudinary using hbs.
+
+Week 16 Day 3
+Read a  txt file using fs and convert all the letter to uppercase and make a new file named uppcaseFile.txt
+Read a  txt file using fs and lorem key word and make a new file named loremFile.txt
+
+Week 17 Day 1
+Foobar - question
+
+Week 17 Day 2
+Create an CRUD login application using express generator.
+Params
+Username
+Email
+Passoword
+User can login using 
+Username and password 
+If successful -- send out as Login Success else the error.
+User can update any of the above params.
+User can update and delete.
+To validate all api endpoint use postman.
+
+Week 17 Day 4
+Library Application 
+Add books 
+Book name, 
+book author, 
+genre, 
+published year, 
+rating, 
+
+Filter books based on the same author. List all the books Update book details Can update any of the details
